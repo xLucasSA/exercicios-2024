@@ -14,6 +14,15 @@ class Scrapper {
    * Loads paper information from the HTML and returns the array with the data.
    */
   public function scrap(\DOMDocument $dom): array {
+    $element = $dom->getElementById('hits-container')->parentNode;
+    $result = [];
+
+    foreach ($element->childNodes as $child) {
+      if ($child->nodeName === 'a') {
+        
+      }
+    }
+
     return [
       new Paper(
         123,
